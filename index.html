@@ -1,0 +1,113 @@
+<!-- Project: Climate Action Pledge Microsite -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🌍 Climate Action Pledge</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;800&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+</head>
+<body>
+
+  <!-- HERO Section -->
+  <section class="hero" data-aos="fade-up">
+    <div class="hero-content slide-in">
+      <h1><span class="glow">🌍 Climate Action Starts With You</span></h1>
+      <p class="fade-in">Take a pledge. Inspire others. Save the planet.</p>
+      <button class="pulse" onclick="document.getElementById('pledgeForm').scrollIntoView({ behavior: 'smooth' })">🌿 Take the Pledge Now</button>
+    </div>
+  </section>
+
+  <!-- KPI Tracker -->
+  <section class="kpi fade-in" data-aos="zoom-in">
+    <h2>📊 Community Impact</h2>
+    <div class="kpi-box">
+      <div><h3>🎯 Goal</h3><p>1,000,000 Pledges</p></div>
+      <div><h3>📈 Pledges</h3><p id="pledgeCount">0</p></div>
+      <div><h3>🎓 Students</h3><p id="studentCount">0</p></div>
+      <div><h3>💼 Professionals</h3><p id="proCount">0</p></div>
+      <div><h3>🌐 Others</h3><p id="otherCount">0</p></div>
+    </div>
+  </section>
+
+  <!-- WHY Section -->
+  <section class="why slide-in" data-aos="fade-up">
+    <h2>🌱 Why It Matters</h2>
+    <p>Because when you take action, others follow. Together, we build a climate-conscious future.</p>
+  </section>
+
+  <!-- PLEDGE FORM -->
+  <section id="pledgeForm" class="form-section fade-in" data-aos="fade-up">
+    <h2>📝 Climate Pledge Form</h2>
+    <form id="form">
+      <input type="text" id="name" placeholder="Full Name" required />
+      <input type="email" id="email" placeholder="Email Address" required />
+      <input type="tel" id="mobile" placeholder="Mobile Number" required pattern="[0-9]{10}" title="10-digit number"/>
+      <select id="state" required>
+        <option value="">Select State</option>
+        <option value="Karnataka">Karnataka</option>
+        <option value="Tamil Nadu">Tamil Nadu</option>
+      </select>
+      <select id="profile" required>
+        <option value="">Select Profile</option>
+        <option value="Student">Student</option>
+        <option value="Working Professional">Working Professional</option>
+        <option value="Other">Other</option>
+      </select>
+
+      <div class="checkboxes">
+        <p><strong>Choose Your Commitments:</strong></p>
+        <label><input type="checkbox" name="commitment" value="Plant Trees"> 🌳 Plant Trees</label>
+        <label><input type="checkbox" name="commitment" value="Avoid Plastic"> 🚫 Avoid Plastic</label>
+        <label><input type="checkbox" name="commitment" value="Save Energy"> 💡 Save Energy</label>
+      </div>
+
+      <button type="submit">🚀 Submit Pledge</button>
+    </form>
+    <p class="privacy">🔒 Your email & mobile are secure and won't be shown publicly.</p>
+  </section>
+
+  <!-- SUCCESS MESSAGE -->
+  <section id="successMessage" class="slide-in" style="display:none; text-align:center; margin-top:20px;">
+    <h3 style="color:green;">✅ Thank you for pledging! Scroll down to download your certificate.</h3>
+  </section>
+
+  <!-- CERTIFICATE DISPLAY -->
+  <section id="certificateSection" style="display:none;" class="slide-in" data-aos="zoom-in">
+    <h2>🎉 Your Certificate</h2>
+    <div id="certificate" class="certificate-box"></div>
+    <button onclick="downloadCertificate()">📄 Download Certificate</button>
+  </section>
+
+  <!-- PLEDGE WALL -->
+  <section class="wall fade-in" data-aos="fade-up">
+    <h2>🌟 Pledge Wall</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Avatar</th>
+          <th>Name</th>
+          <th>Date</th>
+          <th>State</th>
+          <th>Profile</th>
+          <th>Love 💚</th>
+        </tr>
+      </thead>
+      <tbody id="pledgeTable"></tbody>
+    </table>
+  </section>
+
+  <!-- SCRIPTS -->
+  <script src="script.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
+</body>
+</html>
+
+
+
+
+

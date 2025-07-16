@@ -1,0 +1,200 @@
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(to right, #e0f7fa, #f0f9f0);
+  color: #222;
+  padding: 20px;
+}
+
+/* HERO */
+.hero {
+  background-image: url('https://images.unsplash.com/photo-1527549993586-dff825b37782');
+  background-size: cover;
+  background-position: center;
+  padding: 70px 20px;
+  text-align: center;
+  color: white;
+  border-radius: 20px;
+  text-shadow: 1px 1px 4px #000;
+}
+.hero h1 span {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 10px 20px;
+  border-radius: 8px;
+  color: #e0f7fa;
+  font-size: 2.5rem;
+}
+.hero p {
+  font-size: 1.3rem;
+  margin-top: 10px;
+}
+.pulse {
+  margin-top: 20px;
+  background: white;
+  color: #065f46;
+  border: none;
+  padding: 14px 30px;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+/* KPI Box */
+.kpi-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+.kpi-box div {
+  text-align: center;
+  padding: 10px;
+  flex: 1;
+  transition: transform 0.3s ease;
+  min-width: 150px;
+}
+.kpi-box div:hover {
+  transform: scale(1.08);
+  background: #d1fae5;
+  border-radius: 8px;
+}
+
+/* WHY */
+.why {
+  background: #dcfce7;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+/* FORM */
+.form-section {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  margin-top: 40px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+form input, select {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+.checkboxes label {
+  display: block;
+  margin: 6px 0;
+}
+form button {
+  background: #10b981;
+  color: white;
+  padding: 12px;
+  width: 100%;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  margin-top: 10px;
+  cursor: pointer;
+}
+form button:hover {
+  background: #059669;
+}
+.privacy {
+  font-size: 0.9rem;
+  margin-top: 10px;
+  color: gray;
+}
+
+/* CERTIFICATE */
+.certificate-box {
+  background: #fff;
+  padding: 40px;
+  border: 5px double #065f46;
+  border-radius: 12px;
+  font-family: 'Georgia', serif;
+  text-align: center;
+  max-width: 600px;
+  margin: auto;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.certificate-box h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #065f46;
+}
+.certificate-box h2 {
+  font-size: 1.6rem;
+  margin: 12px 0;
+}
+.certificate-box p {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+/* PLEDGE WALL */
+table {
+  width: 100%;
+  background: white;
+  border-collapse: collapse;
+  margin-top: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+}
+th, td {
+  padding: 12px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+img {
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+/* ANIMATIONS */
+.slide-in {
+  animation: slide-in 1s ease forwards;
+}
+.fade-in {
+  opacity: 0;
+  animation: fade-in 2s forwards;
+}
+@keyframes slide-in {
+  from { transform: translateX(-100px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+@keyframes fade-in {
+  to { opacity: 1; }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero h1 span {
+    font-size: 1.8rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+  .kpi-box {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+
